@@ -74,16 +74,16 @@ geom_sf(data = coords_sf_brazil, aes(color = species), size = 2.5,
         shape = 18, alpha = 0.5) +  # Ocorrências das espécies no Brasil
   scale_color_manual(
     values = c(
-      "Paubrasilia echinata" = "#CC6677",
-      "Setaria parviflora" = "#332288",
-      "Achyrocline satureioides" = "#DDCC77",
+      "Leontopithecus rosalia" = "#CC6677",
+      "Cyanopsitta spixii" = "#332288",
+      "Myrmecophaga tridactyla" = "#DDCC77",
       "Bertholletia excelsa" = "#117733",
       "Myracrodruon urundeuva" = "#88CCEE"
     ),
     labels = c(
-      "Paubrasilia echinata" = expression(italic("Paubrasilia echinata")),
-      "Setaria parviflora" = expression(italic("Setaria parviflora")),
-      "Achyrocline satureioides" = expression(italic("Achyrocline satureioides")),
+      "Leontopithecus rosalia" = expression(italic("Leontopithecus rosalia")),
+      "Cyanopsitta spixii" = expression(italic("Cyanopsitta spixii")),
+      "Myrmecophaga tridactyla" = expression(italic("Myrmecophaga tridactyla")),
       "Bertholletia excelsa" = expression(italic("Bertholletia excelsa")),
       "Myracrodruon urundeuva" = expression(italic("Myracrodruon urundeuva"))
     )) +
