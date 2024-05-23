@@ -18,9 +18,9 @@ library(cols4all)
 
 # Buscar dados de ocorrência no GBIF para espécies específicas
 
-species_list <- c("Paubrasilia echinata", "Setaria parviflora", 
-                  "Achyrocline satureioides", "Bertholletia excelsa", 
-                  "Myracrodruon urundeuva")
+species_list <- c("Leontopithecus rosalia", "Cyanopsitta spixii", 
+                  "Myrmecophaga tridactyla", "Panthera onca", 
+                  "Chrysocyon brachyurus")
 
 # Função para buscar dados de uma espécie
 
