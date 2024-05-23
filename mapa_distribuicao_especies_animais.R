@@ -34,11 +34,12 @@ get_occ_data <- function(species_name) {
 # Buscar dados para todas as espécies
 
 all_occ_data <- bind_rows(lapply(species_list, get_occ_data))
+View(all_occ_data)
 
 # Converter para objeto sf
 
 coords_sf_all <- st_as_sf(all_occ_data, coords = c("decimalLongitude", "decimalLatitude"), crs = 4326)
-
+View(coords_sf_all)
 
 # Obter dados das fronteiras dos países
 
