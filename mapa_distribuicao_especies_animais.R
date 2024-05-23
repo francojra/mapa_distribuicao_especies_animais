@@ -56,7 +56,7 @@ coords_sf_brazil <- st_intersection(coords_sf_all, brazil)
 
 # Ajustar os limites do mapa para focar na América do Norte
 
-xlim <- c(-85, -36)
+xlim <- c(-90, -36)
 ylim <- c(-37, 6.7)   
 
 # Visualizar mapa --------------------------------------------------------------------------------------------------------------------------
@@ -93,7 +93,7 @@ geom_sf(data = coords_sf_brazil, aes(color = species), size = 2,
        y = "Latitude",
        colour = "") +
   theme_light() +
- theme(legend.position = c(0.27, 0.27),
+ theme(legend.position = c(0.3, 0.3),
        axis.text = element_text(color = "black",size = 8),
         axis.title = element_text(size = 10, hjust = 1),
         legend.text = element_text(size = 10),
