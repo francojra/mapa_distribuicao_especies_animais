@@ -44,6 +44,7 @@ View(coords_sf_all)
 # Obter dados das fronteiras dos países
 
 world <- ne_countries(scale = "medium", returnclass = "sf")
+View(world)
 
 # Filtrar para um país específico (por exemplo, Brasil)
 
