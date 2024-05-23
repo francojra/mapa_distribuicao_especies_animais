@@ -78,7 +78,7 @@ geom_sf(data = coords_sf_brazil, aes(color = species), size = 2.5,
       "Cyanopsitta spixii" = "#332288",
       "Myrmecophaga tridactyla" = "#DDCC77",
       "Panthera onca" = "#117733",
-      "Myracrodruon urundeuva" = "#88CCEE"
+      "Chrysocyon brachyurus" = "#88CCEE"
     ),
     labels = c(
       "Leontopithecus rosalia" = expression(italic("Leontopithecus rosalia")),
