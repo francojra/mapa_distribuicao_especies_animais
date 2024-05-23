@@ -70,7 +70,7 @@ c4a_gui()
 
 ggplot() +
  geom_sf(data = brazil) +  
-geom_sf(data = coords_sf_brazil, aes(color = species), size = 1.7, 
+geom_sf(data = coords_sf_brazil, aes(color = species), size = 2, 
         shape = 15, alpha = 0.9) +  # Ocorrências das espécies no Brasil
   scale_color_manual(
     values = c(
@@ -82,10 +82,10 @@ geom_sf(data = coords_sf_brazil, aes(color = species), size = 1.7,
     ),
     labels = c(
       "Leontopithecus rosalia" = "Mico-leão-dourado"~italic("(Leontopithecus rosalia)"),
-      "Cyanopsitta spixii" = "Ararinha-azul"~italic("Cyanopsitta spixii"),
-      "Myrmecophaga tridactyla" = "Tamanduá-bandeira"~italic("Myrmecophaga tridactyla"),
-      "Panthera onca" = "Onça-pintada"~italic("Panthera onca"),
-      "Chrysocyon brachyurus" = "Lobo-guará"~italic("Chrysocyon brachyurus")
+      "Cyanopsitta spixii" = "Ararinha-azul"~italic("(Cyanopsitta spixii)"),
+      "Myrmecophaga tridactyla" = "Tamanduá-bandeira"~italic("(Myrmecophaga tridactyla)"),
+      "Panthera onca" = "Onça-pintada"~italic("(Panthera onca)"),
+      "Chrysocyon brachyurus" = "Lobo-guará"~italic("(Chrysocyon brachyurus)")
     )) +
   coord_sf(xlim = xlim, ylim = ylim) +
   labs(title = "Distribuição de Espécies Animais Ameaçados de Extinção no Brasil",
@@ -93,12 +93,14 @@ geom_sf(data = coords_sf_brazil, aes(color = species), size = 1.7,
        y = "Latitude",
        colour = "") +
   theme_light() +
- theme(legend.position = c(0.28, 0.28),
+ theme(legend.position = c(0.27, 0.27),
        axis.text = element_text(color = "black",size = 8),
         axis.title = element_text(size = 10, hjust = 1),
         legend.text = element_text(size = 10),
         text = element_text(size = 9),
-        legend.text.align = 0) 
+        #legend.key = element_rect(fill = "black"),
+       legend.background = element_blank(),
+        legend.text.align = 0)
 
 # Salvar mapa ------------------------------------------------------------------------------------------------------------------------------
 
