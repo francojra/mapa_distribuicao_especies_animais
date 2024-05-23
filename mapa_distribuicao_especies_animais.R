@@ -54,6 +54,11 @@ brazil <- world %>% filter(name == "Brazil")
 
 coords_sf_brazil <- st_intersection(coords_sf_all, brazil)
 
+## Dados biomas
+
+my_biom <- read_sf("lm_bioma_250.shp") 
+view(my_biom)
+
 # Ajustar os limites do mapa para focar na América do Norte
 
 xlim <- c(-90, -36)
@@ -69,8 +74,10 @@ c4a_gui()
 # Criar mapa básico com ggplot2
 
 ggplot() +
- geom_sf(data = brazil) +  
-geom_sf(data = coords_sf_brazil, aes(color = species), size = 2.5, 
+geom_sf(data = brazil, fill = "#ffffcc") + 
+geom_sf(data = my_biom, color = "#005a32", 
+        show.legend = F) +
+geom_sf(data = coords_sf_brazil, aes(color = species), size = 3, 
         shape = 16, alpha = 0.9) +  # Ocorrências das espécies no Brasil
   scale_color_manual(
     values = c( 
