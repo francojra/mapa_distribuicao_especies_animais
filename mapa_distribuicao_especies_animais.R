@@ -77,18 +77,18 @@ geom_sf(data = coords_sf_brazil, aes(color = species), size = 2.5,
       "Leontopithecus rosalia" = "#CC6677",
       "Cyanopsitta spixii" = "#332288",
       "Myrmecophaga tridactyla" = "#DDCC77",
-      "Bertholletia excelsa" = "#117733",
+      "Panthera onca" = "#117733",
       "Myracrodruon urundeuva" = "#88CCEE"
     ),
     labels = c(
       "Leontopithecus rosalia" = expression(italic("Leontopithecus rosalia")),
       "Cyanopsitta spixii" = expression(italic("Cyanopsitta spixii")),
       "Myrmecophaga tridactyla" = expression(italic("Myrmecophaga tridactyla")),
-      "Bertholletia excelsa" = expression(italic("Bertholletia excelsa")),
-      "Myracrodruon urundeuva" = expression(italic("Myracrodruon urundeuva"))
+      "Panthera onca" = expression(italic("Panthera onca")),
+      "Chrysocyon brachyurus" = expression(italic("Chrysocyon brachyurus"))
     )) +
   coord_sf(xlim = xlim, ylim = ylim) +
-  labs(title = "Distribuição de Espécies Vegetais Ameaçadas\n de Extinção no Brasil",
+  labs(title = "Distribuição de Espécies Animais Ameaçados\n de Extinção no Brasil",
        x = "Longitude",
        y = "Latitude",
        colour = "") +
