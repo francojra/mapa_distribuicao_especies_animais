@@ -56,7 +56,7 @@ coords_sf_brazil <- st_intersection(coords_sf_all, brazil)
 
 # Ajustar os limites do mapa para focar na América do Norte
 
-xlim <- c(-81, -36)
+xlim <- c(-85, -36)
 ylim <- c(-37, 6.7)   
 
 # Visualizar mapa --------------------------------------------------------------------------------------------------------------------------
@@ -69,35 +69,35 @@ c4a_gui()
 # Criar mapa básico com ggplot2
 
 ggplot() +
- geom_sf(data = brazil, fill = "#000000") +  
-geom_sf(data = coords_sf_brazil, aes(color = species), size = 2.5, 
-        shape = 18, alpha = 0.5) +  # Ocorrências das espécies no Brasil
+ geom_sf(data = brazil) +  
+geom_sf(data = coords_sf_brazil, aes(color = species), size = 1.7, 
+        shape = 15, alpha = 0.9) +  # Ocorrências das espécies no Brasil
   scale_color_manual(
     values = c(
-      "Leontopithecus rosalia" = "#CC6677",
-      "Cyanopsitta spixii" = "#332288",
-      "Myrmecophaga tridactyla" = "#DDCC77",
-      "Panthera onca" = "#117733",
-      "Chrysocyon brachyurus" = "#88CCEE"
+      "Leontopithecus rosalia" = "#A40000",
+      "Cyanopsitta spixii" = "#16317D",
+      "Myrmecophaga tridactyla" = "#007E2F",
+      "Panthera onca" = "#FFCD12",
+      "Chrysocyon brachyurus" = "#B86092"
     ),
     labels = c(
-      "Leontopithecus rosalia" = expression(italic("Leontopithecus rosalia")),
-      "Cyanopsitta spixii" = expression(italic("Cyanopsitta spixii")),
-      "Myrmecophaga tridactyla" = expression(italic("Myrmecophaga tridactyla")),
-      "Panthera onca" = expression(italic("Panthera onca")),
-      "Chrysocyon brachyurus" = expression(italic("Chrysocyon brachyurus"))
+      "Leontopithecus rosalia" = "Mico-leão-dourado - "~italic("Leontopithecus rosalia"),
+      "Cyanopsitta spixii" = "Ararinha-azul - "~italic("Cyanopsitta spixii"),
+      "Myrmecophaga tridactyla" = "Mico-leão-dourado"~italic("Myrmecophaga tridactyla"),
+      "Panthera onca" = "Mico-leão-dourado"~italic("Panthera onca"),
+      "Chrysocyon brachyurus" = "Mico-leão-dourado"~italic("Chrysocyon brachyurus")
     )) +
   coord_sf(xlim = xlim, ylim = ylim) +
-  labs(title = "Distribuição de Espécies Animais Ameaçados\n de Extinção no Brasil",
+  labs(title = "Distribuição de Espécies Animais Ameaçados de Extinção no Brasil",
        x = "Longitude",
        y = "Latitude",
        colour = "") +
-  theme_minimal() +
-  theme(legend.position = c(0.28, 0.28),
-        axis.text = element_text(color = "black",size = 8),
+  theme_light() +
+ theme(legend.position = c(0.28, 0.28),
+       axis.text = element_text(color = "black",size = 8),
         axis.title = element_text(size = 10, hjust = 1),
         legend.text = element_text(size = 10),
-        text = element_text(size = 10),
+        text = element_text(size = 9),
         legend.text.align = 0) 
 
 # Salvar mapa ------------------------------------------------------------------------------------------------------------------------------
