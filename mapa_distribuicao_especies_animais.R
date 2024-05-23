@@ -69,16 +69,16 @@ c4a_gui()
 # Criar mapa básico com ggplot2
 
 ggplot() +
- geom_sf(data = brazil, fill = "#B1BEFA", alpha = 0.6) +  
-geom_sf(data = coords_sf_brazil, aes(color = species), size = 2.3, 
+ geom_sf(data = brazil) +  
+geom_sf(data = coords_sf_brazil, aes(color = species), size = 2.5, 
         shape = 16, alpha = 0.9) +  # Ocorrências das espécies no Brasil
   scale_color_manual(
-    values = c(  
-      "Leontopithecus rosalia" = "#931E18",
-      "Cyanopsitta spixii" = "#2F397A",
-      "Myrmecophaga tridactyla" = "#247D3F",
-      "Panthera onca" = "#F0BE3D",
-      "Tapirus terrestris" = "#FE00FA"
+    values = c( 
+      "Leontopithecus rosalia" = "#4C005C",
+      "Cyanopsitta spixii" = "#094568",
+      "Myrmecophaga tridactyla" = "#469D76",
+      "Panthera onca" = "#DA7901",
+      "Tapirus terrestris" = "#C93F55"
     ),
     labels = c(
       "Leontopithecus rosalia" = "Mico-leão-dourado"~italic("(Leontopithecus rosalia)"),
@@ -88,7 +88,7 @@ geom_sf(data = coords_sf_brazil, aes(color = species), size = 2.3,
       "Tapirus terrestris" = "Anta-brasileira"~italic("(Tapirus terrestris)")
     )) +
   coord_sf(xlim = xlim, ylim = ylim) +
-  labs(title = "Distribuição de Espécies Animais Ameaçados de Extinção no Brasil",
+  labs(title = "Distribuição de Espécies de Animais Ameaçados de Extinção no Brasil",
        x = "Longitude",
        y = "Latitude",
        colour = "") +
