@@ -20,7 +20,7 @@ library(cols4all)
 
 species_list <- c("Leontopithecus rosalia", "Cyanopsitta spixii", 
                   "Myrmecophaga tridactyla", "Panthera onca", 
-                  "Chrysocyon brachyurus")
+                  "Tapirus terrestris")
 
 # Função para buscar dados de uma espécie
 
@@ -73,19 +73,19 @@ ggplot() +
 geom_sf(data = coords_sf_brazil, aes(color = species), size = 2, 
         shape = 15, alpha = 0.9) +  # Ocorrências das espécies no Brasil
   scale_color_manual(
-    values = c(
-      "Leontopithecus rosalia" = "#A40000",
-      "Cyanopsitta spixii" = "#16317D",
-      "Myrmecophaga tridactyla" = "#007E2F",
-      "Panthera onca" = "#FFCD12",
-      "Chrysocyon brachyurus" = "#B86092"
+    values = c( 
+      "Leontopithecus rosalia" = "#D55E00",
+      "Cyanopsitta spixii" = "#E69F00",
+      "Myrmecophaga tridactyla" = "#009E73",
+      "Panthera onca" = "#F0E442",
+      "Tapirus terrestris" = "#CC79A7"
     ),
     labels = c(
       "Leontopithecus rosalia" = "Mico-leão-dourado"~italic("(Leontopithecus rosalia)"),
       "Cyanopsitta spixii" = "Ararinha-azul"~italic("(Cyanopsitta spixii)"),
       "Myrmecophaga tridactyla" = "Tamanduá-bandeira"~italic("(Myrmecophaga tridactyla)"),
       "Panthera onca" = "Onça-pintada"~italic("(Panthera onca)"),
-      "Chrysocyon brachyurus" = "Lobo-guará"~italic("(Chrysocyon brachyurus)")
+      "Tapirus terrestris" = "Anta-brasileira"~italic("(Tapirus terrestris)")
     )) +
   coord_sf(xlim = xlim, ylim = ylim) +
   labs(title = "Distribuição de Espécies Animais Ameaçados de Extinção no Brasil",
