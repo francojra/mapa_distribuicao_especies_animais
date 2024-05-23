@@ -69,16 +69,16 @@ c4a_gui()
 # Criar mapa básico com ggplot2
 
 ggplot() +
- geom_sf(data = brazil) +  
-geom_sf(data = coords_sf_brazil, aes(color = species), size = 2, 
-        shape = 15, alpha = 0.9) +  # Ocorrências das espécies no Brasil
+ geom_sf(data = brazil, fill = "#B1BEFA", alpha = 0.6) +  
+geom_sf(data = coords_sf_brazil, aes(color = species), size = 2.3, 
+        shape = 16, alpha = 0.9) +  # Ocorrências das espécies no Brasil
   scale_color_manual(
-    values = c( 
-      "Leontopithecus rosalia" = "#D55E00",
-      "Cyanopsitta spixii" = "#E69F00",
-      "Myrmecophaga tridactyla" = "#009E73",
-      "Panthera onca" = "#F0E442",
-      "Tapirus terrestris" = "#CC79A7"
+    values = c(  
+      "Leontopithecus rosalia" = "#931E18",
+      "Cyanopsitta spixii" = "#2F397A",
+      "Myrmecophaga tridactyla" = "#247D3F",
+      "Panthera onca" = "#F0BE3D",
+      "Tapirus terrestris" = "#FE00FA"
     ),
     labels = c(
       "Leontopithecus rosalia" = "Mico-leão-dourado"~italic("(Leontopithecus rosalia)"),
@@ -93,7 +93,7 @@ geom_sf(data = coords_sf_brazil, aes(color = species), size = 2,
        y = "Latitude",
        colour = "") +
   theme_light() +
- theme(legend.position = c(0.3, 0.3),
+ theme(legend.position = c(0.3, 0.32),
        axis.text = element_text(color = "black",size = 8),
         axis.title = element_text(size = 10, hjust = 1),
         legend.text = element_text(size = 10),
