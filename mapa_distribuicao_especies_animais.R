@@ -81,11 +81,11 @@ geom_sf(data = coords_sf_brazil, aes(color = species), size = 1.7,
       "Chrysocyon brachyurus" = "#B86092"
     ),
     labels = c(
-      "Leontopithecus rosalia" = "Mico-leão-dourado - "~italic("Leontopithecus rosalia"),
-      "Cyanopsitta spixii" = "Ararinha-azul - "~italic("Cyanopsitta spixii"),
-      "Myrmecophaga tridactyla" = "Mico-leão-dourado"~italic("Myrmecophaga tridactyla"),
-      "Panthera onca" = "Mico-leão-dourado"~italic("Panthera onca"),
-      "Chrysocyon brachyurus" = "Mico-leão-dourado"~italic("Chrysocyon brachyurus")
+      "Leontopithecus rosalia" = "Mico-leão-dourado"~italic("(Leontopithecus rosalia)"),
+      "Cyanopsitta spixii" = "Ararinha-azul"~italic("Cyanopsitta spixii"),
+      "Myrmecophaga tridactyla" = "Tamanduá-bandeira"~italic("Myrmecophaga tridactyla"),
+      "Panthera onca" = "Onça-pintada"~italic("Panthera onca"),
+      "Chrysocyon brachyurus" = "Lobo-guará"~italic("Chrysocyon brachyurus")
     )) +
   coord_sf(xlim = xlim, ylim = ylim) +
   labs(title = "Distribuição de Espécies Animais Ameaçados de Extinção no Brasil",
