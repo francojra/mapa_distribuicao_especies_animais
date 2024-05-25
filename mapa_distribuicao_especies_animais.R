@@ -113,10 +113,10 @@ map_sp_animals
 
 # Salvar mapa ------------------------------------------------------------------------------------------------------------------------------
 
-ggsave("m.jpg", dpi = 300,
+ggsave("map_sp_animals.jpg", dpi = 300,
        width = 35, height = 15, 
-       units = "cm", m)
+       units = "cm", map_sp_animals)
 
-ggsave("m.pdf", dpi = 300,
+ggsave("map_sp_animals.pdf", dpi = 300,
        width = 35, height = 15, 
-       units = "cm", m) 
+       units = "cm", map_sp_animals) 
