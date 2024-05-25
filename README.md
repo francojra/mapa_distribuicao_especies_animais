@@ -6,4 +6,7 @@
 
 ### Tópicos do script:
 
-
+1. Carregar pacotes;
+2. Carregar dados;
+3. Visualizar mapa;
+4. Salvar mapa.
