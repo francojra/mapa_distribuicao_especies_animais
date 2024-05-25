@@ -73,7 +73,7 @@ ylim <- c(-37, 6.7)
 
 # Criar mapa básico com ggplot2
 
-ggplot() +
+map_sp_animals <- ggplot() +
 geom_sf(data = brazil, fill = "#ffffcc") + 
 geom_sf(data = my_biom, color = "#005a32", 
         show.legend = F) +
@@ -108,6 +108,8 @@ geom_sf(data = coords_sf_brazil, aes(color = species), size = 3,
         #legend.key = element_rect(fill = "black"),
        legend.background = element_blank(),
         legend.text.align = 0)
+
+map_sp_animals
 
 # Salvar mapa ------------------------------------------------------------------------------------------------------------------------------
 
