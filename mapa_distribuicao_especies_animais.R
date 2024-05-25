@@ -68,8 +68,8 @@ ylim <- c(-37, 6.7)
 
 # Definir cores
 
-cols4all::c4a_table(type = "cat", n = 5)
-c4a_gui()
+#cols4all::c4a_table(type = "cat", n = 5)
+#c4a_gui()
 
 # Criar mapa básico com ggplot2
 
